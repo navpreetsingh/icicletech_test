@@ -25,17 +25,18 @@ In this test we convert numbers to words or group of words whose min length is 3
 ```
 
 3. Convert numbers to words
+
     a. Default with given inputs
-        ```
-            ruby conversion.rb
-        ```
+    ```
+        ruby conversion.rb
+    ```
     
     b. With external arguments
-        ```
-            ruby conversion.rb 6626262589 8258252437
-        ```
+    ```
+        ruby conversion.rb 6626262589 8258252437
+    ```
 
 4. Test cases are written in Minitest
-    ```
-        ruby conversion_test.rb
-    ```
+```
+    ruby conversion_test.rb
+```
