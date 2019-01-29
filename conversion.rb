@@ -41,7 +41,7 @@ class Conversion
                         temp_output = mixin(temp_output, new_temp_output) 
                         # puts "Temp Output: #{temp_output}"
                         begin
-                            output << temp_output
+                            output = output + temp_output
                         rescue Exception => e
                             puts "Exception Message: #{e.message}"
                             puts "Exception Trace: #{e.backtrace.inspect  }"
@@ -65,7 +65,7 @@ class Conversion
                         end     
                     end
                 end
-                puts "Array_1: #{array_1}, Array_2: #{array_2}, Mixin output: #{mixin_output}"
+                # puts "Array_1: #{array_1}, Array_2: #{array_2}, Mixin output: #{mixin_output}"
                 mixin_output
             rescue Exception => e
                 puts "Exception Message: #{e.message}"
@@ -75,10 +75,13 @@ class Conversion
 end
 
 numbers = [6686787825, 2282668687]
+input_numbers = ARGV
+numbers = numbers + input_numbers
 
 numbers.each do |number|
     t1 = Time.now
     conversion = Conversion.new(number)
+    puts number
     result = conversion.result
     puts "Time Taken: #{Time.now - t1}"
     puts "Number: #{number} \n Final Result: #{result}"
