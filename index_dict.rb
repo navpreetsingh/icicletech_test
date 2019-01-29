@@ -29,7 +29,7 @@ class IndexDict
     def hash(word, key)
         @hash_indexing[key[0..2]] = {} if @hash_indexing[key[0..2]].nil?
         @hash_indexing[key[0..2]][key] = [] if @hash_indexing[key[0..2]][key].nil?
-        @hash_indexing[key[0..2]][key] << word
+        @hash_indexing[key[0..2]][key] << word.downcase
     end
 
     def convert(word)
