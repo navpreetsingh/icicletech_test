@@ -2,7 +2,7 @@
 
 In this test we convert numbers to words or group of words whose min length is 3
 
-## Install ruby using [RVM](https://rvm.io/rvm/install
+## Install ruby using [RVM](https://rvm.io/rvm/install)
 
 ## Things done in this test
 
